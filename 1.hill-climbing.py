@@ -66,7 +66,7 @@ def main():
     y = np.linspace(-20,20,50)
     X, Y = np.meshgrid(x, y)
     Z = f(X, Y)
-    ax.contour3D(X, Y, Z, 100, cmap='binary', alpha=0.8)
+   
     for ind in indice_max_global:
         for traj in trajetoria:
             if traj[0] == ind:
