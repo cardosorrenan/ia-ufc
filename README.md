@@ -1,45 +1,58 @@
-
-  #### Q01. Encontre  o  máximo  da  função f(x,y)  = |xsen(yπ/4)  + ysen(xπ/4)|  por  meio  do algoritmo hill-climbing.  As  variáveis x  e y  pertencem  ao  intervalo  entre  0  e  20. Os vizinhos de determinado estado (x, y) são (x± 0,01, y± 0,01). Por exemplo, os vizinhos do estado (1, 1) são (1,01, 1,01), (0,99, 0,99), (0,99, 1,01) e (1,01, 0,99).
-  #### Resultado
-  > . / codes / hillClimbing.py
+ * <center> Find the topmost function f(x,y) = |xsen(yπ/4) + ysen(xπ/4)| through the hill-climbing algorithm. The variables x and y belong to the interval between 0 and 20. The neightbor of (x, y) are (x± 0,01, y± 0,01), for example: the frontier of state (1, 1) are (1,01, 1,01), (0,99, 0,99), (0,99, 1,01) e (1,01, 0,99).</center>
+ 
+  <p align="center">
+    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/src/img/q01.png" width="600">
+  </p>
+  
+   > . / src / hillClimbing.py
+  
+---
+  
+  * <center> Build a algorithm based in fuzzy logic that receive three values: pedal pressure, wheel speed and car speed and returns the brake pressure.</center>
+ 
+  <p align="center">
+    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/src/img/q02.png" width="600">
+  </p>
+  
+  > . / src / fuzzy.py
+  
+---
+  
+  * <center> Using a set data of wind turbine (input: speed wind - m/s, output: generated power - kW), determine the models of polynomial regression (degrees 2, 3, 4 and 5) with estimates parameters for the least square method. Measure the quality of each model by R^2 and adjusted R^2 metric.</center>
   
   <p align="center">
-    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/codes/img/q01.png" width="450">
+    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/src/img/q03.png" width="550">
   </p>
+  
+  > . / src / regressaoPolinomial.py
+  
 ---
-  #### Q02. Construa um programa baseado em lógica fuzzy (inferência de Mamdani) que receba três valores: pressão no pedal, velocidade da roda e velocidade do carro e que devolva a pressão no freio. Siga as regras disponibilizadas nos slides sobre Lógica Fuzzy.
+
+  * <center> Determine the model of regression using neural network Extreme Learning Machine (ELM) for set data of wind turbine. Measure the quality of each model by R^2 metric for different quantities of hidden neurons.</center>
+
+  <p align="center">
+    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/src/img/q04.png" width="550">
+  </p>
+
+  > . / src / elmAero.py
+  
+---
+
+  * <center> Using the twomoons.dat dataset, plot the dispersion graph (scatterplot) with different colors for different classes. Consider that in the first column there are the measures of variable x1 and in the second column the measures of variable x2. The label of class of each vector measures (x1, x2) is given on third column. Trace the decision surface obtained using all samples as training. Use the ELM neural network.</center>
+   
+  <p align="center">
+    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/src/img/q05.png" width="550">
+  </p>
+  
+  > . / src / fuzzy.py
+
+---
+
+  * <center> Create a genetic algorithm for find the max of function f(x,y) = |xsen(yπ/4) + ysen(xπ/4)|. Each population individual is a binary vector of 20 bits, the first 10 represents 'x' coordenate and the remains the 'y' coordenate. The variables x, y belong to [0, 20] interval. The crossover to be used is 1 point.</center> 
+  
+  <p align="center">
+    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/src/img/q06.png" width="750">
+  </p>
+  
   > . / codes / fuzzy.py
   
-  <p align="center">
-    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/codes/img/q02.png" width="450">
-  </p>
----
-  #### Q03. Usando o conjunto de dados do aerogerador (variável de entrada: velocidade do vento – m/s, variável de saída: potência gerada – kWatts), determine os modelos de regressão polinomial  (graus  2,  3,  4  e  5)  com  parâmetros  estimados  pelo  método  dos  mínimos quadrados. Avalie a qualidade de cada modelo pela métrica R2 e R2aj (equações 48 e 49, slides sobre Regressão Múltipla).
-  > . / codes / regressaoPolinomial.py
-  
-  <p align="center">
-    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/codes/img/q03.png" width="450">
-  </p>
----
-  #### Q04. Determine um modelo de regressão usando rede neural Extreme Learning Machine (ELM) para o conjunto de dados do aerogerador (variável de entrada: velocidade do vento, variável de saída: potência gerada). Avalie a qualidade do modelo pela métrica R2 para diferentes quantidades de neurônios ocultos.
-  > Em revisão
----
-  #### Q05. Classifique o conjunto de dados disponível no arquivo iris_log.dat usando: Perceptron, MLP, e ELM. Utilize as estratégias de validação: hold-out (70% treino, 30% teste), 10-fold e leave-one-out. A base iris_log.dat, as quatro primeiras colunas representam os atributos dos vetores de  características  e  as  três últimas representam a classe da amostra ([1 0 0], [0 1 0] e [0 0 1]).
-  > Em revisão
----
-  #### Q06. Usando o conjunto de dados 2-D disponível no arquivo twomoons.dat. Plote o gráfico de dispersão (scatterplot) usando cores diferentes para diferenciar entre os dados de uma classe e da outra. Considere que na primeira coluna  constam  as  medidas da  variável x1 e na segunda coluna as medidas da variável x2. O rótulo da classe de cada vetor de  medidas (x1, x2) é dado na terceira  coluna. Trace a superfície de decisão obtida com o uso de todas as amostras como treinamento. Obs.: implementar a rede neural ELM.
-  > . / codes / elmTwoMoons.py
-  
-  <p align="center">
-    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/codes/img/q06.png" width="450">
-  </p>
----
-  #### Q07. Usando o conjunto de dados disponível no arquivo iris_log.dat. Particionar o conjunto de dados aleatoriamente em 80% dos dados para treino e 20% para teste. Repita cada experimento (treino  +  teste) 50 vezes e calcule a taxa média de acertos, e os valores mínimo e máximo. Implementar  a  rede  neural RBF.
- > Em revisão
----
-  #### Q08.  Crie  um  algoritmo  genético  para  achar  o  máximo da  função f(x,y)  = |xsen(yπ/4)  + ysen(xπ/4)|. Cada indivíduo da população é um vetor binário de 20 bits, em que os 10 primeiros  representam x  e  os  restantes  representam y.  As  variáveis x  e y  pertencem  ao intervalo entre 0 e 20. O crossover a ser usado é de 1 ponto. 
-  > . / codes / genAlg.py
-  
-  <p align="center">
-    <img src="https://github.com/cardosorrenan/ia-ufc/blob/master/codes/img/q08.png" width="450">
-  </p>
