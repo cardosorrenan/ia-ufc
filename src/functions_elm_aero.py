@@ -45,8 +45,8 @@ def train_elm(neurons, train_i, train_o):
     input_ol = prepare_input(activation_hl)
     weight_ol = train_o.T @ input_ol
     weight_ol = weight_ol.dot(np.linalg.inv(input_ol.T @ input_ol))
-    testing_final = weight_ol @ input_ol.T
-    return testing_final.T, weight_hl, weight_ol
+    training_final = weight_ol @ input_ol.T
+    return training_final.T, weight_hl, weight_ol
 
 
 def test_elm(test_i, weight_hl, weight_ol):

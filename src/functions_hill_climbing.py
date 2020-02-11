@@ -44,8 +44,8 @@ def find_print_global_max(local_max):
     return i_global_max
 
 
-def func(x_func, y_func):
-    return np.abs(x_func * np.sin(y_func * np.pi / 4) + y_func * np.sin(x_func * np.pi / 4))
+def func(x, y):
+    return np.abs(x * np.sin(y * np.pi / 4) + y * np.sin(x * np.pi / 4))
 
 
 def plot_result(i_max, path):
@@ -60,6 +60,7 @@ def plot_result(i_max, path):
         for p in path:
             if p[0] == i:
                 a_x.scatter(p[1], p[2], p[3], c='red', marker='*', s=10)
-    plt.show()
+
+    plt.savefig('plot_output/hill_climbing.png')
 
    

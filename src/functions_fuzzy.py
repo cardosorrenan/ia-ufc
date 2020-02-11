@@ -3,7 +3,7 @@ class PedalPressure():
         while True:
             x = int(input('Pedal pressure: '))
             if x > 0 and x < 100: break
-            print("pedal pressure: [0, 100]")
+            print("Pedal pressure: [0, 100]")
         self.low = round(-x/50 + 1, 3)
         if x > 50: self.medium = round(-x/20 + 7/2, 3)
         else: self.medium = round(x/20 - 3/2, 3)
@@ -16,12 +16,12 @@ class PedalPressure():
         if self.high < 0: self.high = 0
 
 
-class SpeedCar():
+class CarSpeed():
     def __init__(self):
         while True:
-            x = int(input('Speed car: '))
+            x = int(input('Car speed: '))
             if x > 0 and x < 100: break
-            print("Speed car: [0, 100]")
+            print("Car speed: [0, 100]")
         self.low = round(-x/60 + 1, 3)
         if x > 50: self.medium = round(-x/30 + 8/3, 3)
         else: self.medium = round(x/30 - 2/3, 3)
@@ -34,12 +34,12 @@ class SpeedCar():
         if self.high < 0: self.high = 0
 
 
-class SpeedWheel():
+class WheelSpeed():
     def __init__(self):
         while True:
-            x = int(input('Speed wheel: '))
+            x = int(input('Wheel speed: '))
             if x > 0 and x < 100: break
-            print("Speed car: [0, 100]")
+            print("Wheel speed: [0, 100]")
         self.low = round(-x/60 + 1, 3)
         if x > 50: self.medium = round(-x/30 + 8/3, 3)
         else: self.medium = round(x/30 - 2/3, 3)

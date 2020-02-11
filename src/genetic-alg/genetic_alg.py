@@ -1,10 +1,13 @@
-from assist_genetic_alg import *
+from functions_genetic_alg import *
+from individual import Individual
+from population import Population
+
 
 create_txt_files()
 
 population_len = 50 # Number of individuals in populations
-mutation_rate = 0.01 # Chance of occur a mutation on chromosome
-generations_len = 50
+mutation_rate = 0.05 # Chance of occur a mutation on chromosome
+generations_len = 20
 
 individuals = hello_darwin() # Returns 1048576 (1024x1024) individuals, or chromosomes :D
 population = Population(individuals, population_len) # Create a new population

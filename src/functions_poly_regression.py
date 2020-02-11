@@ -18,7 +18,6 @@ def get_degree():
         if n_degree >= 2 and n_degree <= 5:
             break
         print("type a [1, 5] interval...")
-    print('OK')
     return n_degree
 
 

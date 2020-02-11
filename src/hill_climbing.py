@@ -1,4 +1,4 @@
-from assist_hill_climbing import *
+from functions_hill_climbing import *
 
 
 local_max, path = [], []
@@ -22,10 +22,10 @@ for search in range(1, n_searches+1):
                     if t[0] == search:
                         cont += 1
                 local_max.append([search, current_node.x, current_node.y, current_node.value])
-                print("-- Search nº{}: X: {}, Y: {}, Value: {} - Steps: {}".format(search, round(current_node.x, 2), round(current_node.y, 2), round(current_node.value, 6), cont))
+                print("-- Search nº {}: X: {}, Y: {}, Value: {} - Steps: {}".format(search, round(current_node.x, 2), round(current_node.y, 2), round(current_node.value, 6), cont))
                 break
         else:
-            print("-- Search nº{}: The search found the limit (-20 < x,y < 20)".format(search))
+            print("-- Search nº {}: The search found the limit (-20 < x,y < 20)".format(search))
             break
 
 i_global_max = find_print_global_max(local_max)
